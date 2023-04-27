@@ -1,0 +1,39 @@
+<div class="card-top container-fluid">
+  <div class="d-flex container">
+    <div class="item">
+      <a>
+        <img src="https://lh3.googleusercontent.com/proxy/gQPxJtsr68cL9DRIpYTsi-h4RwyGwEFD0fVu1pFYwgdLYnhS3-qEvaqVubziHfTOWfNgdc_b4MJGcpG_CXIXdt8s2LguevamgRdcth396GRfu90MyU-eUjkQYVPW5vYsEnyJfW___MTG" height="50" alt="">
+        <h6>All Products</h6>
+      </a>
+
+    </div>
+    <div class="item">
+      <a>
+        <img src="https://lh3.googleusercontent.com/proxy/gQPxJtsr68cL9DRIpYTsi-h4RwyGwEFD0fVu1pFYwgdLYnhS3-qEvaqVubziHfTOWfNgdc_b4MJGcpG_CXIXdt8s2LguevamgRdcth396GRfu90MyU-eUjkQYVPW5vYsEnyJfW___MTG" height="50" alt="">
+        <h6>Eletronics</h6>
+      </a>
+
+    </div>
+    <div class="item">
+      <a>
+        <img src="https://lh3.googleusercontent.com/proxy/gQPxJtsr68cL9DRIpYTsi-h4RwyGwEFD0fVu1pFYwgdLYnhS3-qEvaqVubziHfTOWfNgdc_b4MJGcpG_CXIXdt8s2LguevamgRdcth396GRfu90MyU-eUjkQYVPW5vYsEnyJfW___MTG" height="50" alt="">
+        <h6>Fashion</h6>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ng-container  *ngFor="let product of productList">
+      <div class="card col-md-3">
+        <img [src]="product.image" alt="">
+        <h6 style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{product.title}}</h6>
+        <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{product.description}}</p>
+        <p><strong>Price: </strong>${{product.price}}</p>
+        <button class="btn btn-primary" (click)="addProductToCart(product)">Add to Cart</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
